@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appproyecto.Views.Detail"
+             Title="Home">
+    <ContentPage.Content>
+        
+        <Grid BackgroundColor="Black">
+            
+            <Image Source="imadeta.jpg" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="380"/>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="170"/>
+                    <RowDefinition Height="20"/>
+
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1" Padding="12,20">
+
+                    <Label
+                        Text="Monumento a la Cacica Gaitana"
+                        TextColor="White"
+                        FontSize="15"
+                        FontAttributes="Italic"
+                        HorizontalOptions="End"
+                        VerticalOptions="StartAndExpand"
+                    />
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Padding="12,20">
+                    
+                    <Label
+                        Text="Neiva, Huila"
+                        TextColor="White"
+                        FontSize="15"
+                        FontAttributes="Italic"
+                        HorizontalOptions="End"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalTextAlignment="End"                        
+                    />
+                    
+                </StackLayout>
+
+                <StackLayout Grid.Row="2">
+                    
+                    <Label
+                        Text="Todos los derechos reservados"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="EndAndExpand"
+                        FontAttributes="Italic"
+                        
+                    />
+                    
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

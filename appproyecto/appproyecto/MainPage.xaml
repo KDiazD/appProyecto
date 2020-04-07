@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appproyecto.MainPage">
+
+    <Grid>
+        <Image Source="fondohd.jpg" Aspect="AspectFill" />
+        <BoxView BackgroundColor="Black" Opacity="0.7" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="1" Padding="30,20">
+                <Label
+                    Text="Bienvenidos a la ciudad Bambuquera de Colombia"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                 />
+
+                <Button
+                    Text="Iniciar"
+                    x:Name="iniciar_app"
+                    Clicked="iniciar_app_Clicked"
+                    BorderColor="White"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    BorderWidth="2"
+                    CornerRadius="9"
+                    
+                />
+            </StackLayout>
+
+
+        </Grid>
+    </Grid>
+    
+
+
+</ContentPage>

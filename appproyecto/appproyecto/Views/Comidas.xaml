@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             mc:Ignorable="d"
+             x:Class="appproyecto.Views.Comidas"
+             Title="Comidas Tipicas">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<SearchBar x:Name="searchBar"
+               SearchCommand="{Binding FilterCommand}"
+               SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+               Placeholder="Filter" />-->
+            <CollectionView x:Name="Listado_comidas" BackgroundColor="Black">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="1"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Frame HasShadow="True"
+                               HorizontalOptions="StartAndExpand"
+                               Margin="15,5"
+                               HeightRequest="100"
+                               WidthRequest="350"
+                               Padding="10"
+                               IsClippedToBounds="True">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ffimageloading:CachedImage Grid.Row="0" 
+                                                            Grid.Column="0" 
+                                                            Grid.RowSpan="3" 
+                                                            HorizontalOptions="Center"
+                                                            VerticalOptions="Center"
+                                                            Source="icon.png">
+
+                                    </ffimageloading:CachedImage>
+
+                                    <Label Grid.Row="0" 
+                                       Grid.Column="1" 
+                                       HorizontalTextAlignment="Start" 
+                                       FontSize="Large"
+                                       TextColor="Black"
+                                       VerticalTextAlignment="Center"
+                                       Text="Prueba 1">
+                                    </Label>
+
+                                    <Label Grid.Row="1" 
+                                       Grid.Column="1" 
+                                       Text="Sof212121">
+                                    </Label>
+
+                                    <Label Grid.Row="2" 
+                                       Grid.Column="1"
+                                       Text="$80000">
+
+                                    </Label>
+
+
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Baboon</x:String>
+                        <x:String>Capuchin Monkey</x:String>
+                        <x:String>Blue Monkey</x:String>
+                        <x:String>Squirrel Monkey</x:String>
+                        <x:String>Golden Lion Tamarin</x:String>
+                        <x:String>Howler Monkey</x:String>
+                        <x:String>Japanese Macaque</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
