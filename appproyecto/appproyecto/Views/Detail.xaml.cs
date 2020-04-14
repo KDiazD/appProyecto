@@ -16,5 +16,10 @@ namespace appproyecto.Views
         {
             InitializeComponent();
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

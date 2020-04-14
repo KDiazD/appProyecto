@@ -9,11 +9,10 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Historia de Neiva"
-                    TextColor="White"
+                    TextColor="Black"
                    FontAttributes="Bold"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center"
-                   VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

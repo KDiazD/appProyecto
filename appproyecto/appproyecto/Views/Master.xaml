@@ -34,6 +34,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -75,6 +76,18 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" BackgroundColor="White">
+                    <Button
+                        Text="Foro"
+                        x:Name="foro"
+                        Clicked="foro_Clicked"
+                        BackgroundColor="Transparent"
+                     />
+                </StackLayout>
+
+               
+                
+                
+                <StackLayout Grid.Row="5" BackgroundColor="White">
                     
                 </StackLayout>
                 

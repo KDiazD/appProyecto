@@ -15,21 +15,21 @@ using appproyecto.Views;
 namespace appproyecto.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Lugares : ContentPage
+    public partial class Foro : ContentPage
     {
         private Api api = new Api();
-        public Lugares()
+        public Foro()
         {
             InitializeComponent();
-            GetLugares();
+            GetForo();
         }
 
-        private async void GetLugares()
+        private async void GetForo()
         {
-            HttpClient client = new HttpClient();
-            string response = await client.GetStringAsync(api.url + "/citytour/listar_lugares");
-            var listar_lugares = JsonConvert.DeserializeObject<List<Listar_lugares>>(response);
-            Listado_lugares.ItemsSource = listar_lugares;
+            HttpClient cliente = new HttpClient();
+            string response = await cliente.GetStringAsync(api.url + "/citytour/listar_comentarios");
+            var foro = JsonConvert.DeserializeObject<List<Listar_foro>>(response);
+            Lista_Foro.ItemsSource = foro;
 
         }
     }

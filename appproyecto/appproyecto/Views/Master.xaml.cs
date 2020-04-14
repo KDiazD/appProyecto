@@ -43,5 +43,12 @@ namespace appproyecto.Views
             App.MasterD.IsPresented = false;
             await App.MasterD.Detail.Navigation.PushAsync(new Fiestas());
         }
+
+        private async void foro_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+            await App.MasterD.Detail.Navigation.PushAsync(new Foro());
+
+        }
     }
 }

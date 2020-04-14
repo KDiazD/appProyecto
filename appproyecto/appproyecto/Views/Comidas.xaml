@@ -8,13 +8,15 @@
              mc:Ignorable="d"
              x:Class="appproyecto.Views.Comidas"
              Title="Comidas Tipicas">
+
     <ContentPage.Content>
         <StackLayout>
-            <!--<SearchBar x:Name="searchBar"
+            <SearchBar x:Name="searchBar"
                SearchCommand="{Binding FilterCommand}"
                SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
-               Placeholder="Filter" />-->
-            <CollectionView x:Name="Listado_comidas" BackgroundColor="Black">
+               Placeholder="Filter" />
+            <ScrollView>
+            <CollectionView x:Name="Listado_comidas" BackgroundColor="Black"  SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="1"/>
                 </CollectionView.ItemsLayout>
@@ -29,6 +31,8 @@
                                Padding="10"
                                IsClippedToBounds="True">
                                 <Grid>
+
+
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="50"/>
                                         <RowDefinition Height="Auto"/>
@@ -39,14 +43,14 @@
                                         <ColumnDefinition Width="100"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <ffimageloading:CachedImage Grid.Row="0" 
+                                    <Image Grid.Row="0" 
                                                             Grid.Column="0" 
                                                             Grid.RowSpan="3" 
                                                             HorizontalOptions="Center"
                                                             VerticalOptions="Center"
-                                                            Source="icon.png">
+                                                            Source="{Binding imagen}">
 
-                                    </ffimageloading:CachedImage>
+                                    </Image>
 
                                     <Label Grid.Row="0" 
                                        Grid.Column="1" 
@@ -54,38 +58,20 @@
                                        FontSize="Large"
                                        TextColor="Black"
                                        VerticalTextAlignment="Center"
-                                       Text="Prueba 1">
+                                       Text="{Binding nombre}">
                                     </Label>
 
-                                    <Label Grid.Row="1" 
+                                        <Label Grid.Row="1" 
                                        Grid.Column="1" 
-                                       Text="Sof212121">
-                                    </Label>
-
-                                    <Label Grid.Row="2" 
-                                       Grid.Column="1"
-                                       Text="$80000">
-
-                                    </Label>
-
-
-                                </Grid>
+                                       Text="{Binding descripcion}">
+                                        </Label>
+                                    </Grid>
                             </Frame>
                         </ContentView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Baboon</x:String>
-                        <x:String>Capuchin Monkey</x:String>
-                        <x:String>Blue Monkey</x:String>
-                        <x:String>Squirrel Monkey</x:String>
-                        <x:String>Golden Lion Tamarin</x:String>
-                        <x:String>Howler Monkey</x:String>
-                        <x:String>Japanese Macaque</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
             </CollectionView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
