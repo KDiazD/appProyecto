@@ -31,41 +31,49 @@
                                Padding="10"
                                IsClippedToBounds="True">
                                 <Grid>
-
-
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="50"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
+                                           <RowDefinition Height="80"/>
+                                        </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="160"/>
                                         <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        </Grid.ColumnDefinitions>
+                                    
                                     <Image Grid.Row="0" 
-                                                            Grid.Column="0" 
-                                                            Grid.RowSpan="3" 
-                                                            HorizontalOptions="Center"
-                                                            VerticalOptions="Center"
-                                                            Source="{Binding imagen}">
+                                           Grid.Column="0" 
+                                           Grid.RowSpan="3" 
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Source="{Binding imagen}">
 
                                     </Image>
 
-                                    <Label Grid.Row="0" 
+                                    <Label Grid.Row="0"
+                                       Grid.RowSpan="3"
                                        Grid.Column="1" 
-                                       HorizontalTextAlignment="Start" 
+                                       HorizontalTextAlignment="Center" 
+                                       HorizontalOptions="Center"
                                        FontSize="Large"
                                        TextColor="Black"
                                        VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
                                        Text="{Binding nombre}">
                                     </Label>
 
-                                        <Label Grid.Row="1" 
-                                       Grid.Column="1" 
-                                       Text="{Binding descripcion}">
-                                        </Label>
-                                    </Grid>
+                                    <ImageButton
+                                        Source="nextt.png"
+                                        Grid.RowSpan="3"
+                                        Grid.Column="2"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand">
+                                            
+                                    </ImageButton>
+
+
+                                </Grid>
                             </Frame>
                         </ContentView>
                     </DataTemplate>

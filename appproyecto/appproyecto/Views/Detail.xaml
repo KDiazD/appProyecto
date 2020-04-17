@@ -9,8 +9,8 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Text="Login"
-            IconImageSource="icon.png"
+            
+            IconImageSource="loginn.png"
             Order="Primary"
             Clicked="ToolbarItem_Clicked"
             Priority="0">

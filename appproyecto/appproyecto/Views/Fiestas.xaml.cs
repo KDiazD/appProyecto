@@ -31,5 +31,7 @@ namespace appproyecto.Views
             var listar_fiestas = JsonConvert.DeserializeObject<List<Listar_fiestas>>(response);
             Listado_fiestas.ItemsSource = listar_fiestas;
         }
+
+        
     }
 }

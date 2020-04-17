@@ -6,6 +6,6 @@ namespace appproyecto.Models
 {
     class Api
     {
-        public string url { get; } = "http://3d4c4972.ngrok.io";
+        public string url { get; } = "http://eca946b6.ngrok.io";
     }
 }

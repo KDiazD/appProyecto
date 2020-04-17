@@ -33,6 +33,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -86,9 +90,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\appproyecto\appproyecto.csproj">
       <Project>{0AF78EEA-2D62-4632-BE57-4A5C1BA90C65}</Project>
       <Name>appproyecto</Name>
@@ -104,16 +105,17 @@
     <AndroidResource Include="Resources\drawable\fondohd.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\fondoneiva.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\NEIVA.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\monumento.jpg" />
+    <AndroidResource Include="Resources\drawable\santander.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\santander.JPG" />
+    <AndroidResource Include="Resources\drawable\Estrechomagdalena.png" />
+    <AndroidResource Include="Resources\drawable\humedal.jpg" />
+    <Content Include="Resources\drawable\iconoapp.png" />
+    <AndroidResource Include="Resources\drawable\nextt.png" />
+    <AndroidResource Include="Resources\drawable\loginn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

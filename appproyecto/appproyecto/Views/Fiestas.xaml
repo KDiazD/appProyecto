@@ -19,6 +19,7 @@
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
+                            
                             <ContentView>
                                 <Frame HasShadow="True"
                                    HorizontalOptions="StartAndExpand"
@@ -31,8 +32,7 @@
 
 
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="50"/>
-                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="70"/>
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
 
@@ -41,6 +41,7 @@
                                             <ColumnDefinition Width="160"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
+                                        
                                         <Image Grid.Row="0" 
                                                Grid.Column="0" 
                                                Grid.RowSpan="3" 
@@ -52,27 +53,34 @@
 
                                         <Label Grid.Row="0" 
                                                Grid.Column="1" 
-                                               HorizontalTextAlignment="Start" 
+                                               HorizontalTextAlignment="Center" 
                                                FontSize="Large"
                                                TextColor="Black"
                                                VerticalTextAlignment="Center"
+                                               
                                                FontAttributes="Bold"
                                                Text="{Binding nombre}">
                                         </Label>
 
                                         <Label Grid.Row="1" 
-                                           Grid.Column="1" 
-                                           Text="{Binding descripcion}">
-                                        </Label>
-
-                                        <Label Grid.Row="0"
-                                               Grid.Column="2"
-                                               TextColor="Black"
-                                               VerticalTextAlignment="Center"
-                                               FontSize="8"
+                                               Grid.Column="1"
+                                               HorizontalTextAlignment="End"
+                                               VerticalTextAlignment="End"
+                                             
                                                Text="{Binding mes}">
-
                                         </Label>
+
+                                        <ImageButton Grid.RowSpan="3"
+                                                     Grid.Column="2"
+                                                     Source="nextt.png"
+                                                     BackgroundColor="Transparent"
+                                                     HorizontalOptions="CenterAndExpand"
+                                                     VerticalOptions="CenterAndExpand"
+                                                     >
+
+                                        </ImageButton>
+
+                
 
 
                                     </Grid>
