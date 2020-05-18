@@ -9,13 +9,8 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <SearchBar x:Name="searchBar"
-               SearchCommand="{Binding FilterCommand}"
-               SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
-               Placeholder="Filter">
-            </SearchBar>
             <ScrollView>
-            <CollectionView x:Name="Listado_lugares" BackgroundColor="Black" SelectionMode="Single">
+            <CollectionView ItemsSource="{Binding Listado_lugares}}"  BackgroundColor="Black" SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="1"/>
                 </CollectionView.ItemsLayout>

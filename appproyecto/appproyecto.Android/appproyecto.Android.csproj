@@ -113,6 +113,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Estrechomagdalena.png" />
     <AndroidResource Include="Resources\drawable\humedal.jpg" />
+    <AndroidResource Include="Resources\drawable\achiras.jpg" />
     <Content Include="Resources\drawable\iconoapp.png" />
     <AndroidResource Include="Resources\drawable\nextt.png" />
     <AndroidResource Include="Resources\drawable\loginn.png" />

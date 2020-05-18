@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="appproyecto.Views.Login"
-             Title="Login">
+             x:Class="appproyecto.Views.Registro"
+             Title="Registro">
     <ContentPage.Content>
 
         <Grid>
-            <Image Source="humedal.jpg" Aspect="AspectFill"/>
+            <Image Source="Santander.JPG" Aspect="AspectFill"/>
             <BoxView BackgroundColor="Black" Opacity="0.5"/>
 
             <Grid>
@@ -42,23 +42,26 @@
                 <StackLayout Grid.Row="2" Grid.Column="1" Padding="30,20">
                         <Entry
                             Placeholder="Usuario"
-                            x:Name="user"
+                            Text="{Binding InfoUsuario.user,Mode=TwoWay}"
                             PlaceholderColor="White"
                             Keyboard="Default"
+                            TextColor="White"
                         />
 
                         <Entry
                             Placeholder="Contraseña"
-                            x:Name="pass"
                             PlaceholderColor="White"
                             Keyboard="Default"
+                            Text="{Binding InfoUsuario.pass,Mode=TwoWay}"
+                            IsPassword="True"
+                            TextColor="White"
                     
                         />
 
                         <Button
-                            Text="Entrar"
-                            x:Name="entrar"
+                            Text="Registrarse"
                             BorderColor="White"
+                            Command = "{Binding RegistroCommand}"
                             BackgroundColor="Transparent"
                             TextColor="White"
                             BorderWidth="2"

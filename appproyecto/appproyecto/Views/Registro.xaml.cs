@@ -1,4 +1,3 @@
-﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +8,19 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using appproyecto.ViewModels;
 
-
 namespace appproyecto.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Lugares : ContentPage
+    public partial class Registro : ContentPage
     {
-        LugaresViewModel ViewModel;
+        RegistroViewModel ViewModel;
 
-        public Lugares()
+        public Registro()
         {
             InitializeComponent();
-            BindingContext = ViewModel = new LugaresViewModel();
+            // alternativa mas simple que el locator
+            BindingContext = ViewModel = new RegistroViewModel();
+
         }
-
-
     }
 }

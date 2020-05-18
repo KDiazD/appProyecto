@@ -50,5 +50,14 @@ namespace appproyecto.Views
             await App.MasterD.Detail.Navigation.PushAsync(new Foro());
 
         }
+
+        private async void registro_Clicked(object sender, EventArgs e)
+        {
+
+            App.MasterD.IsPresented = false;
+            await App.MasterD.Detail.Navigation.PushAsync(new Registro());
+
+
+        }
     }
 }
